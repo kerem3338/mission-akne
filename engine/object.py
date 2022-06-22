@@ -1,8 +1,15 @@
 import pygame
 from engine.sprite import *
 from pathlib import Path
+import platform
 
 SOURCEPATH = Path(__file__).parents[1]
+
+def run_cmd(path):
+    if platform.system() == "Linux":
+        if not os.access(os.path.abspath(os.path.join(SOURCEPATH, path)), os.X_OK):
+            return sys.executable + " " + os.path.abspath(os.path.join(SOURCEPATH, path))
+    return os.path.abspath(os.path.join(SOURCEPATH, path))
 
 def source_path(path):
     return os.path.abspath(os.path.join(SOURCEPATH, path))

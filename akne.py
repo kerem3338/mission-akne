@@ -12,7 +12,7 @@ import sys
 import time
 
 from engine.object import source_path
-
+from engine.object import run_cmd
 
 global screen
 screen=engine.Window(600,400).getforlevel()
@@ -108,7 +108,7 @@ class Fight:
 
                     if i.key == pygame.K_SPACE:
                         pygame.quit()
-                        os.system(source_path(f"{__file__}"))
+                        os.system(run_cmd(f"{__file__}"))
                         sys.exit()
                         
 
