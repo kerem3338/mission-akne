@@ -7,7 +7,7 @@ Oyun aynı klavyeden 2 kişi ile oynanabilir<br>
 
 ## **English**<br>
 **Warning!** This is not final game.<br>
-Amacınız ölmeden rakip oyuncuyu öldürmektir.<br>
+
 You can play this game with 2 people on same keyboard<br>
 
 # Kontroller/Controls
