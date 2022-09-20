@@ -66,8 +66,8 @@ class Fight:
         self.box2.update()
 
         self.bullet_counts={
-            "player":4,
-            "bot":4
+            "player":4*100,
+            "bot":4*100
         }
 
         
