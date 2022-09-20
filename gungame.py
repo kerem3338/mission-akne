@@ -14,6 +14,7 @@ import time
 from engine.object import source_path
 from engine.object import run_cmd
 
+
 global screen
 screen=engine.Window(600,400).getforlevel()
 class Menu:
@@ -108,7 +109,7 @@ class Fight:
 
                     if i.key == pygame.K_SPACE:
                         pygame.quit()
-                        os.system(run_cmd(f"{__file__}"))
+                        os.system(engine.run_cmd(f"{__file__}"))
                         sys.exit()
                         
 
@@ -218,8 +219,13 @@ class Fight:
             self.bot.draw(self.screen)
             pygame.display.update()
 
-menu=engine.Level(Menu)
-menu.run()
 
-fight=engine.Level(Fight)
-fight.run()
+def run(menu):
+    if menu:
+        menu=engine.Level(Menu)
+        menu.run()
+    else: pass
+    fight=engine.Level(Fight)
+    fight.run()
+if __name__ == "__main__":
+    run(menu=True)
